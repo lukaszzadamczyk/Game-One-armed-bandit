@@ -15,14 +15,14 @@ class Game{
         this.render();
 
     }
-    render(colors = ['gray', 'gray', 'gray'],money = this.wallet.getMoney(), stats = [0,0,0], result = true, won = 0, bid = 0, ){
+    render(colors = ['gray', 'gray', 'gray'],money = this.wallet.getMoney(), stats = [0,0,0], result = '', won = 0, bid = 0){
         this.boards.forEach((board, index)=>{
             board.style.backgroundColor = colors[index]
         })
         if(result){
-            result = `You Win ${won}`
-        }else if(!result && result != ''){
-            result = `You Lose ${bid}`
+            result = `You Win ${won}$.`
+        }else if(!result && result !== ''){
+            result = `You Lose ${bid}$.`
         }
         this.spanResult.textContent = result;
         this.spanWallet.textContent = money;
@@ -30,9 +30,31 @@ class Game{
         this.spanWins.textContent = stats[1];
         this.spanLosses.textContent = stats[2];
 
+        this.input.value = ''
+
     }
 
     startGame(){
+        if(this.input.value < 1) return alert('the rate is too low !');
+        const bid = Math.floor(this.input.value);
+        if(!this.wallet.checkCanPlay(bid)){
+            return alert('you don t have enough money !')
+        }
+        this.wallet.changeMoneyWallet(bid,'-');
+
+        this.draw = new Draw();
+
+        const colors = this.draw.getDrawResult();
+
+        const win = Result.checkWinner(colors);
+
+        const won = Result.moneyWinInGame(win, bid);
+
+        this.wallet.changeMoneyWallet(won);
+
+        this.statistics.addGameToStatistics(win, bid);
+
+        this.render(colors, this.wallet.getMoney(), this.statistics.showGameStatistics(), win, won, bid)
 
     }
 }
