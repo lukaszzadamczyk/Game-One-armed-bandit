@@ -1,0 +1,8 @@
+.wrap {
+    max-width: 80%;
+    margin: 0 auto;
+    background-color: $main-color;
+    color: $font-color;
+    box-shadow: 0 0 2px 1px darken($color: $main-color, $amount: 30%);
+    text-align: center;
+}

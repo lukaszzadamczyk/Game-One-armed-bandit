@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <h1 class="title">One-armed bandit</h1>
+
+        <section class="game">
+            <div class="game__color"></div>
+            <div class="game__color"></div>
+            <div class="game__color"></div>
+        </section>
+        <section class="play">
+            <input type="number" class="play__bid" placeholder="Enter your rate">
+            <button class="play__start">Spin</button>
+        </section>
+        <section class="panel">
+            <p class="panel__text">Your pre-game credits: <span class="panel__span"></span></p>
+        </section>
+        <section class="score">
+            <span class="score__result"></span> ! Behind you <span class="score__number">0</span> games, incl <span
+                class="score__win">0</span> won and <span class="score__loss">0</span> losers
+        </section>
+    </div>
+    <script src="./js/Wallet.js"></script>
+    <script src="./js/Statistics.js"></script>
+    <script src="./js/Draw.js"></script>
+    <script src="./js/Result.js"></script>
+    <script src="./js/Game.js"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>

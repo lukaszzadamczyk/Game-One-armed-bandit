@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #a97f7f;
+}
+
+.wrap {
+  max-width: 80%;
+  margin: 0 auto;
+  background-color: #b38e8e;
+  color: white;
+  -webkit-box-shadow: 0 0 2px 1px #644444;
+          box-shadow: 0 0 2px 1px #644444;
+  text-align: center;
+}
+
+.title {
+  padding: 20px 0;
+  font-size: 3rem;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.game {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 40px 0;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.game__color {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  height: 300px;
+  background-color: #9c9898;
+  -webkit-box-shadow: 0 0 2px 1px #744e4e;
+          box-shadow: 0 0 2px 1px #744e4e;
+}
+
+.play {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 50px;
+}
+
+.play__bid {
+  padding: 10px 50px;
+  margin: 20px 0;
+  font-size: 2rem;
+  text-align: center;
+  color: #b38e8e;
+  border: 2px solid black;
+}
+
+.play__start {
+  padding: 10px 50px;
+  font-size: 2rem;
+  color: white;
+  background-color: #252323;
+  border: 2px solid black;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+}
+
+.play__start:hover {
+  background-color: #3f3c3c;
+}
+
+.panel {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.score {
+  font-size: 1.5rem;
+  padding: 20px 0;
+}
+
+.score__result {
+  font-weight: bold;
+}
+
+.score__number {
+  font-weight: bold;
+}
+
+.score__win {
+  font-weight: bold;
+}
+
+.score__loss {
+  font-weight: bold;
+}
+/*# sourceMappingURL=style.css.map */
